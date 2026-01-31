@@ -6,4 +6,7 @@ import org.springframework.stereotype.Repository
 
 @Repository
 interface BookRatingRep : JpaRepository<BookRating, Long> {
+
+    fun findByBookId(bookId: Long): BookRating?
+
 }
